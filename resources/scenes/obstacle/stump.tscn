@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4jmxxj20w7sy"]
+
+[ext_resource type="Texture2D" uid="uid://djcgyb2w1b6m7" path="res://resources/sprite/world_tileset.png" id="1_pjk7b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfwfh"]
+atlas = ExtResource("1_pjk7b")
+region = Rect2(-0.210649, 48.0639, 17.0679, 48.4319)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qohpw"]
+radius = 7.11111
+height = 46.2222
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88ewk"]
+atlas = ExtResource("1_pjk7b")
+region = Rect2(15.6992, 47.5204, 16.9751, 16.7575)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lqxyu"]
+
+[node name="stump" type="StaticBody2D"]
+scale = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 3
+scale = Vector2(1.5, 1.5)
+texture = SubResource("AtlasTexture_qfwfh")
+region_enabled = true
+region_rect = Rect2(0, -0.385437, 15.9999, 48.7713)
+
+[node name="CollisionPolygon2D2" type="CollisionShape2D" parent="."]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("CapsuleShape2D_qohpw")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-10.6667, 26.6667)
+scale = Vector2(1.33333, 1.33333)
+texture = SubResource("AtlasTexture_88ewk")
+region_enabled = true
+region_rect = Rect2(0, 0.529543, 16, 15.4705)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-10.6667, 26.6667)
+shape = SubResource("CircleShape2D_lqxyu")

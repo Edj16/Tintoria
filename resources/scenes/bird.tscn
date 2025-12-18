@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://df5xexgxhn6bo"]
+
+[ext_resource type="Texture2D" uid="uid://dru8o4yarxolq" path="res://resources/sprite/slime_purple.png" id="1_oy400"]
+[ext_resource type="Script" uid="uid://b0ufblt8h3vqb" path="res://resources/scenes/bird.gd" id="1_sf7m7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sf7m7"]
+atlas = ExtResource("1_oy400")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hd0qr"]
+atlas = ExtResource("1_oy400")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbxgl"]
+atlas = ExtResource("1_oy400")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfdh6"]
+atlas = ExtResource("1_oy400")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_awcyy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sf7m7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hd0qr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbxgl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rfdh6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oy400"]
+size = Vector2(55, 62.5)
+
+[node name="bird" type="Area2D"]
+script = ExtResource("1_sf7m7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-0.4, -16.2)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_awcyy")
+autoplay = "default"
+frame_progress = 0.644214
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.5, 12.75)
+shape = SubResource("RectangleShape2D_oy400")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

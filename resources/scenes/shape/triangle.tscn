@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dt7gwyh7b8isb"]
+
+[ext_resource type="Script" uid="uid://bpt0pf082jt" path="res://resources/scenes/shape/triangle.gd" id="1_nk2t4"]
+[ext_resource type="AudioStream" uid="uid://dp7k8hdy3lr2" path="res://resources/music/acquire.wav" id="2_ml2l2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p6rot"]
+height = 32.0
+
+[node name="triangle" type="Area2D"]
+script = ExtResource("1_nk2t4")
+
+[node name="back" type="Polygon2D" parent="."]
+position = Vector2(0.0884018, 3.0884)
+rotation = 3.13605
+polygon = PackedVector2Array(0, -16, -16, 16, 16, 16)
+
+[node name="front" type="Polygon2D" parent="."]
+position = Vector2(0.0884018, 5.0884)
+rotation = 3.13605
+scale = Vector2(0.75, 0.75)
+polygon = PackedVector2Array(0, -16, -16, 16, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_p6rot")
+
+[node name="sfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_ml2l2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,96 @@
+[gd_scene load_steps=11 format=3 uid="uid://nr45kofkwswe"]
+
+[ext_resource type="Texture2D" uid="uid://cu0ootvmbstlh" path="res://resources/bg/clouds/layer09_Sky.png" id="1_c6pfs"]
+[ext_resource type="Script" uid="uid://c2l52k42gh5j2" path="res://resources/scenes/parallaxBG.gd" id="1_fcopb"]
+[ext_resource type="Texture2D" uid="uid://d023gdi551j2j" path="res://resources/bg/clouds/layer08_Stars_1.png" id="2_fcopb"]
+[ext_resource type="Texture2D" uid="uid://cp8oeus5ag5yu" path="res://resources/bg/clouds/layer07_Stars_2.png" id="3_t0yqt"]
+[ext_resource type="Texture2D" uid="uid://hnq8fverymiv" path="res://resources/bg/clouds/layer06_Stars_3.png" id="4_cuglm"]
+[ext_resource type="Texture2D" uid="uid://dsummpfud8t70" path="res://resources/bg/clouds/layer05_Castle.png" id="5_lijig"]
+[ext_resource type="Texture2D" uid="uid://8upacn0ekdhs" path="res://resources/bg/clouds/layer04_Path.png" id="6_gknj0"]
+[ext_resource type="Texture2D" uid="uid://6x6b3a10c3ok" path="res://resources/bg/clouds/layer03_Clouds_3.png" id="7_rqmit"]
+[ext_resource type="Texture2D" uid="uid://hffml5ulaulq" path="res://resources/bg/clouds/layer02_Clouds_2.png" id="8_dmlms"]
+[ext_resource type="Texture2D" uid="uid://3qbsju28armu" path="res://resources/bg/clouds/layer01_Clouds_1.png" id="9_o1bxr"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+script = ExtResource("1_fcopb")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(577.5, 325)
+scale = Vector2(0.601562, 0.598148)
+texture = ExtResource("1_c6pfs")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.3, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(579, 325.5)
+scale = Vector2(0.60625, 0.602778)
+texture = ExtResource("2_fcopb")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(579.25, 324.75)
+scale = Vector2(0.598698, 0.596759)
+texture = ExtResource("3_t0yqt")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer4"]
+position = Vector2(578.75, 327.25)
+scale = Vector2(0.599219, 0.599537)
+texture = ExtResource("4_cuglm")
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer6"]
+position = Vector2(575.5, 325.5)
+scale = Vector2(0.601563, 0.600926)
+texture = ExtResource("6_gknj0")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
+position = Vector2(0, -1)
+motion_scale = Vector2(0.01, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer5"]
+position = Vector2(599, 380)
+scale = Vector2(0.597917, 0.601389)
+texture = ExtResource("5_lijig")
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer7"]
+position = Vector2(576.5, 327)
+scale = Vector2(0.598437, 0.598148)
+texture = ExtResource("7_rqmit")
+
+[node name="ParallaxLayer8" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer8"]
+position = Vector2(576, 323)
+scale = Vector2(0.601042, 0.603704)
+texture = ExtResource("8_dmlms")
+
+[node name="ParallaxLayer9" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer9"]
+position = Vector2(577, 202)
+scale = Vector2(0.601042, 0.827778)
+texture = ExtResource("9_o1bxr")

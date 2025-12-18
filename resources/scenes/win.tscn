@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgbysesr457jq"]
+
+[ext_resource type="Texture2D" uid="uid://dgk5y5k3fk47n" path="res://resources/ui/Text Painting Collected.png" id="1_axqyt"]
+
+[node name="GameOver" type="CanvasLayer"]
+
+[node name="TextPaintingCollected" type="Sprite2D" parent="."]
+position = Vector2(568, 352)
+scale = Vector2(0.497917, 0.37037)
+texture = ExtResource("1_axqyt")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnrh4472j6vq6"]
+
+[ext_resource type="Texture2D" uid="uid://cojyauhvwb0f1" path="res://resources/ui/Text Game Over.png" id="1_ompxk"]
+
+[node name="GameOver" type="CanvasLayer"]
+
+[node name="TextGameOver" type="Sprite2D" parent="."]
+position = Vector2(592, 336)
+scale = Vector2(0.329167, 0.281482)
+texture = ExtResource("1_ompxk")

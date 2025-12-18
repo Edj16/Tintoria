@@ -1,0 +1,174 @@
+[gd_scene load_steps=13 format=3 uid="uid://c5qbab6wtg6et"]
+
+[ext_resource type="FontFile" uid="uid://crbpth2vucfem" path="res://resources/fonts/Press_Start_2P/PressStart2P-Regular.ttf" id="1_5inli"]
+[ext_resource type="Texture2D" uid="uid://by5f3kqfaad0b" path="res://resources/ui/HOMEPAGE BACKGROUND.png" id="1_obwog"]
+[ext_resource type="Texture2D" uid="uid://6gjlc30fd4o3" path="res://resources/ui/Homepage -  Play Button Rectangle.png" id="2_4b2yc"]
+[ext_resource type="Texture2D" uid="uid://bkwg7lm8uteme" path="res://resources/ui/Homepage - Title.png" id="3_1eeln"]
+[ext_resource type="Texture2D" uid="uid://brl72yuh4b0fh" path="res://resources/ui/Sound OFF.png" id="5_obwog"]
+[ext_resource type="Texture2D" uid="uid://cv0n8a5japnm5" path="res://resources/ui/Sound ON.png" id="6_1cqmq"]
+[ext_resource type="Texture2D" uid="uid://b2iskpdsr76n6" path="res://resources/ui/Text Collect.png" id="7_5gcje"]
+[ext_resource type="Texture2D" uid="uid://bc62bh4eg8aw0" path="res://resources/ui/Text Continue.png" id="8_obwog"]
+[ext_resource type="Texture2D" uid="uid://6rabgkknh666" path="res://resources/ui/Retry Button.png" id="12_ryssp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_obwog"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1cqmq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oqdn7"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="HomepageBackground" type="Sprite2D" parent="."]
+position = Vector2(575.5, 324.25)
+scale = Vector2(1.84185, 1.84473)
+texture = ExtResource("1_obwog")
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 242.0
+offset_bottom = 62.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_5inli")
+theme_override_font_sizes/font_size = 18
+text = "SCORE: "
+
+[node name="LifeLabel" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 64.0
+offset_right = 242.0
+offset_bottom = 94.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_5inli")
+theme_override_font_sizes/font_size = 18
+text = "LIVES: "
+
+[node name="StartLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -208.0
+offset_top = 164.0
+offset_right = 232.0
+offset_bottom = 194.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0.537255, 0.443137, 0.415686, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_5inli")
+theme_override_font_sizes/font_size = 23
+text = "PRESS SPACE TO PLAY"
+
+[node name="ProgressBar" type="ProgressBar" parent="." groups=["main_node", "progress_bar"]]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Homepage-Title" type="Sprite2D" parent="."]
+position = Vector2(584, 272)
+scale = Vector2(0.395833, 0.332407)
+texture = ExtResource("3_1eeln")
+
+[node name="PlayButton" type="Sprite2D" parent="."]
+position = Vector2(584, 424)
+scale = Vector2(0.397959, 0.404762)
+texture = ExtResource("2_4b2yc")
+
+[node name="Off_Button" type="Button" parent="."]
+offset_left = 1040.0
+offset_top = 31.0
+offset_right = 1096.0
+offset_bottom = 90.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_obwog")
+icon = ExtResource("5_obwog")
+expand_icon = true
+
+[node name="On_Button" type="Button" parent="."]
+offset_left = 1036.0
+offset_top = 32.0
+offset_right = 1096.0
+offset_bottom = 91.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1cqmq")
+icon = ExtResource("6_1cqmq")
+expand_icon = true
+
+[node name="Collect_Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Collect_Button"]
+position = Vector2(988.029, 486)
+scale = Vector2(0.0921179, 0.116618)
+texture = ExtResource("7_5gcje")
+region_enabled = true
+region_rect = Rect2(222, 192, 1477, 633)
+
+[node name="PressC" type="Label" parent="Collect_Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = 524.0
+offset_right = 244.0
+offset_bottom = 554.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0.537255, 0.443137, 0.415686, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_5inli")
+theme_override_font_sizes/font_size = 16
+text = "PRESS 'C'"
+
+[node name="Continue_Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="PressC" type="Label" parent="Continue_Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 916.0
+offset_top = 532.0
+offset_right = 1060.0
+offset_bottom = 562.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0.537255, 0.443137, 0.415686, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_5inli")
+theme_override_font_sizes/font_size = 16
+text = "PRESS 'R'"
+
+[node name="Sprite2D" type="Sprite2D" parent="Continue_Button"]
+position = Vector2(168, 480)
+scale = Vector2(0.0920785, 0.113744)
+texture = ExtResource("8_obwog")
+region_enabled = true
+region_rect = Rect2(222, 192, 1477, 633)
+
+[node name="Retry_Button" type="Button" parent="."]
+offset_left = 961.0
+offset_top = 21.0
+offset_right = 1017.0
+offset_bottom = 101.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_oqdn7")
+icon = ExtResource("12_ryssp")
+expand_icon = true

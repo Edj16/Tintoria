@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0amqcgr8pm26"
+path="res://.godot/imported/Male Character Death Sound Effect - Free SFX for Games & Movies.mp3-e78c38ba0a39297cefe3f94069f26f5d.mp3str"
+
+[deps]
+
+source_file="res://resources/bg/Male Character Death Sound Effect - Free SFX for Games & Movies.mp3"
+dest_files=["res://.godot/imported/Male Character Death Sound Effect - Free SFX for Games & Movies.mp3-e78c38ba0a39297cefe3f94069f26f5d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

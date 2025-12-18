@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4jraf1aftfbk"]
+
+[ext_resource type="Texture2D" uid="uid://b838v5upuotjb" path="res://resources/sprite/PacManAssets-Items.png" id="1_pgsde"]
+[ext_resource type="Script" uid="uid://vjxa5awnnvkv" path="res://resources/scenes/color.gd" id="1_tt3ht"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tt3ht"]
+radius = 5.0
+
+[node name="Color" type="Area2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_tt3ht")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_pgsde")
+region_enabled = true
+region_rect = Rect2(19, 19, 10, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_tt3ht")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

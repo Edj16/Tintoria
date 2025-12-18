@@ -1,0 +1,33 @@
+# Godot 4+
+.godot/
+.import/
+.export/
+.android/
+
+# Builds / exports (NEVER COMMIT)
+export/
+build/
+dist/
+*.exe
+*.zip
+*.pck
+
+# Mono / C#
+.mono/
+.nuget/
+
+# Logs & temp
+*.log
+*.tmp
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+.gitattributes/
+.gitignore/
+export_presets.cfg
+icons.svg
+icons.svg.import

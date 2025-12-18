@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b306qbxky8jcu"
+path="res://.godot/imported/splat sound effects (no copyright).mp3-0ca2b63a98b312fa6d39b4012084dd54.mp3str"
+
+[deps]
+
+source_file="res://resources/music/splat sound effects (no copyright).mp3"
+dest_files=["res://.godot/imported/splat sound effects (no copyright).mp3-0ca2b63a98b312fa6d39b4012084dd54.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

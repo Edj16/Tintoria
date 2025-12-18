@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://blx12gbe8ord3"]
+
+[ext_resource type="Script" uid="uid://bi6maigcqus76" path="res://resources/scenes/main.gd" id="1_e3ftf"]
+[ext_resource type="Script" uid="uid://dr21wn64yrr5r" path="res://resources/scenes/scene_manager.gd" id="2_e2o67"]
+[ext_resource type="PackedScene" uid="uid://uofbhdpghs1s" path="res://resources/scenes/platform/ground.tscn" id="2_e3ftf"]
+[ext_resource type="PackedScene" uid="uid://b3ws6fo4kxg8t" path="res://resources/scenes/knight.tscn" id="3_30th6"]
+[ext_resource type="PackedScene" uid="uid://c5qbab6wtg6et" path="res://resources/scenes/hud.tscn" id="5_30th6"]
+[ext_resource type="PackedScene" uid="uid://dnrh4472j6vq6" path="res://resources/scenes/game_over.tscn" id="6_i7dgi"]
+[ext_resource type="PackedScene" uid="uid://cgbysesr457jq" path="res://resources/scenes/win.tscn" id="7_e2o67"]
+
+[node name="Main" type="Node" groups=["main_node"]]
+script = ExtResource("1_e3ftf")
+
+[node name="SceneManager" type="Node" parent="."]
+script = ExtResource("2_e2o67")
+
+[node name="Bg" type="ParallaxBackground" parent="."]
+
+[node name="Ground" parent="." instance=ExtResource("2_e3ftf")]
+
+[node name="Knight" parent="." instance=ExtResource("3_30th6")]
+z_index = 5
+position = Vector2(104, 536)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 320)
+scale = Vector2(5, 5)
+
+[node name="HUD" parent="." instance=ExtResource("5_30th6")]
+
+[node name="GameOver" parent="." instance=ExtResource("6_i7dgi")]
+
+[node name="Win" parent="." instance=ExtResource("7_e2o67")]
+
+[node name="LoseTimer" type="Timer" parent="."]
+
+[node name="FadeRect" type="ColorRect" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="timeout" from="LoseTimer" to="." method="_on_lose_timer_timeout"]

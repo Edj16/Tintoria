@@ -1,0 +1,41 @@
+[gd_scene load_steps=10 format=3 uid="uid://bp4vochf8ihxn"]
+
+[ext_resource type="AudioStream" uid="uid://dxmhls802hmfl" path="res://resources/music/BGM - In Game Music.mp3" id="1_s7ag5"]
+[ext_resource type="Script" uid="uid://34loeuuboyfp" path="res://resources/scenes/bg_music.gd" id="1_wlqfg"]
+[ext_resource type="AudioStream" uid="uid://dp7k8hdy3lr2" path="res://resources/music/acquire.wav" id="3_sce53"]
+[ext_resource type="AudioStream" uid="uid://dlnofn2r7taoq" path="res://resources/music/Game Over 2.wav" id="4_34mnf"]
+[ext_resource type="AudioStream" uid="uid://bdyir2iwt2mn5" path="res://resources/music/Game Win.wav" id="5_udefu"]
+[ext_resource type="AudioStream" uid="uid://0hxgprw4cwwf" path="res://resources/Male Character Death Sound Effect - Free SFX for Games & Movies.mp3" id="6_34mnf"]
+[ext_resource type="AudioStream" uid="uid://cdtdklf6tyyx7" path="res://resources/music/Screaming Hawk Sound Effect.mp3" id="6_udefu"]
+[ext_resource type="AudioStream" uid="uid://b306qbxky8jcu" path="res://resources/music/splat sound effects (no copyright).mp3" id="8_2rbio"]
+[ext_resource type="AudioStream" uid="uid://dn8dipmxtbitp" path="res://resources/music/Painting Completed.wav" id="9_r0gww"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_wlqfg")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_s7ag5")
+
+[node name="Jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_sce53")
+
+[node name="GameOver" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_34mnf")
+
+[node name="Win" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_udefu")
+
+[node name="bird" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_udefu")
+
+[node name="hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_34mnf")
+volume_db = 5.0
+
+[node name="splat" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_2rbio")
+
+[node name="paint_created" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_r0gww")
+volume_db = 10.0
+pitch_scale = 2.0
